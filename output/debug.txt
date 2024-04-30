@@ -1,0 +1,10 @@
+.\input\src\etc .ignore  - -
+.\input\src\etc etc.dat .dat - -
+.\input\src\etc etc.ini .ini - -
+.\input\src\etc zero.txt .txt - {'encoding': None, 'confidence': 0.0, 'language': None}
+.\input\src\img black.ico .ico - {'encoding': None, 'confidence': 0.0, 'language': None}
+.\input\src\img whilte.ico .ico ISO-8859-1 {'encoding': 'ISO-8859-1', 'confidence': 0.73, 'language': ''}
+.\input\src\txt euc-jp.txt .txt EUC-JP {'encoding': 'EUC-JP', 'confidence': 0.99, 'language': 'Japanese'}
+.\input\src\txt gb2312.txt .txt GB2312 {'encoding': 'GB2312', 'confidence': 0.99, 'language': 'Chinese'}
+.\input\src\txt shift-jis.txt .txt Windows-1252 {'encoding': 'Windows-1252', 'confidence': 0.73, 'language': ''}
+.\input\src\txt utf-8.txt .txt utf-8 {'encoding': 'utf-8', 'confidence': 0.99, 'language': ''}
