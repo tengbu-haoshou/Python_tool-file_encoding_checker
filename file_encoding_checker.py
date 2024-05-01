@@ -96,8 +96,8 @@ class WriteExcel:
         self._row += 1
         return
 
-    def get_row(self) -> int:
-        return self._row
+    def get_count(self) -> int:
+        return self._row + 1
 
     def write_cell(self, i_col: int, i_value: Union[int, str],
                    i_align: int = None, i_font: Font = None, i_format: str = None) -> None:
@@ -147,7 +147,7 @@ def seek_directories(write_excel: WriteExcel, level: int, dir_root: str, dir_rel
     files.sort(key=str.lower)
     for file in files:
         base, ext = os.path.splitext(file)
-        write_excel.write_cell(CELL_COL_NO, write_excel.get_row(), None, None, NUMBER_FORMAT)
+        write_excel.write_cell(CELL_COL_NO, write_excel.get_count(), None, None, NUMBER_FORMAT)
         write_excel.write_cell(CELL_COL_PATH, dir_relative, ALIGN_LEFT_NO_WRAP, None, None)
         write_excel.write_cell(CELL_COL_FILE, file, ALIGN_LEFT_NO_WRAP, None, None)
         write_excel.write_cell(CELL_COL_EXT, ext, ALIGN_CENTER, None, None)
@@ -166,11 +166,11 @@ def seek_directories(write_excel: WriteExcel, level: int, dir_root: str, dir_rel
             write_excel.write_cell(CELL_COL_ATTERS, '-', ALIGN_CENTER, None, None)
         else:
             write_excel.write_cell(CELL_COL_ATTERS, '%s' % atters, ALIGN_LEFT_NO_WRAP, None, None)
-        print('%s %s %s %s %s' %
-              (dir_relative, file, ext,
+        print('%5d %s %s %s %s %s' %
+              (write_excel.get_count(), dir_relative, file, ext,
                encoding if encoding is not None else '-', atters if atters is not None else '-'))
-        fp.write('%s %s %s %s %s\n' %
-                 (dir_root, file, ext,
+        fp.write('%5d %s %s %s %s %s\n' %
+                 (write_excel.get_count(), dir_root, file, ext,
                   encoding if encoding is not None else '-', atters if atters is not None else '-'))
 
         write_excel.next_row()
