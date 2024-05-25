@@ -22,9 +22,7 @@ Options:
         Print this message and exit.
 """
 
-#
 # Import Libraries
-#
 import os
 import sys
 import getopt
@@ -36,9 +34,7 @@ from chardet.universaldetector import UniversalDetector
 from openpyxl.styles import Font, Alignment, PatternFill
 from openpyxl.styles.borders import Border, Side
 
-#
 # Input, Output
-#
 IN_DIR = '.\\input'
 OUT_DIR = '.\\output'
 # IN_SRC_ROOT = 'D:\\Developments\\PyCharmProjects\\tool-file_encoding_checker\\input'  # noqa
@@ -50,9 +46,7 @@ OUT_SHEET = 'File Encoding Checker List'
 IGNORE_EXTENDS = ['.dat', '.ini']
 OUT_DEBUG = OUT_DIR + '\\debug.txt'
 
-#
 # Excel Cell Position (1 Origin)
-#
 CELL_ROW_OFFSET = 4
 CELL_COL_NO = 2
 CELL_COL_PATH = 3
@@ -61,9 +55,7 @@ CELL_COL_EXT = 5
 CELL_COL_ENCODING = 6
 CELL_COL_ATTERS = 7
 
-#
 # Output Excel Cell Format
-#
 ALIGN_LEFT = Alignment(horizontal='left', vertical='top', wrap_text=True)
 ALIGN_LEFT_NO_WRAP = Alignment(horizontal='left', vertical='top', wrap_text=False)
 ALIGN_CENTER = Alignment(horizontal='center', vertical='top', wrap_text=True)
