@@ -124,6 +124,7 @@ def check_file_encoding(full_path_file):
     return detector.result, detector.result['encoding']
 
 
+# Seek Directories
 def seek_directories(write_excel: WriteExcel, level: int, dir_root: str, dir_relative: str, fp) -> None:
 
     dirs = []
