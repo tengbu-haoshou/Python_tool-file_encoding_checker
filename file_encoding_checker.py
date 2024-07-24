@@ -4,7 +4,7 @@
 # file_encoding_checker.py
 #
 # Date    : 2024-04-30
-# Auther  : Hirotoshi FUJIBE
+# Author  : Hirotoshi FUJIBE
 # History :
 #
 # Copyright (c) 2024 Hirotoshi FUJIBE
